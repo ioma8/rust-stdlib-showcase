@@ -61,15 +61,22 @@ cargo run
 
 ### Exploring the Documentation
 
-This repository includes **comprehensive Rust documentation** with the same look and feel as the official Rust docs:
+This repository includes **comprehensive documentation** built with mdBook:
 
 ```bash
 # Build documentation locally
 cd docs
-cargo doc --no-deps --open
+mdbook serve
+# Then open http://localhost:3000
 ```
 
 Or visit the **online documentation**: [https://ioma8.github.io/rust-stdlib-showcase/](https://ioma8.github.io/rust-stdlib-showcase/)
+
+The documentation includes:
+- **20 dedicated pages** - One for each feature with detailed explanations
+- **Code examples** - Real code from the showcase with annotations
+- **Best practices** - Recommended patterns and anti-patterns
+- **Search functionality** - Quick navigation to any topic
 
 ### Expected Output
 The program will execute all 20 features sequentially, showing:
@@ -114,30 +121,32 @@ This is an educational resource, and contributions are welcome!
 
 ## 📚 Documentation Site
 
-This project includes a **complete Rust documentation site** generated using `rustdoc`:
+This project includes a **comprehensive documentation site** built with mdBook:
 
 ### 🌐 Online Documentation
 
 📖 **[Visit the Documentation Site](https://ioma8.github.io/rust-stdlib-showcase/)**
 
 The online documentation provides:
-- **Authentic Rust docs layout** - Same style as doc.rust-lang.org
 - **20 individual feature pages** - Each feature explained in depth
+- **Three difficulty levels** - Basic, Intermediate, and Advanced
 - **Search functionality** - Find what you need quickly
-- **Code examples** - Runnable examples for each concept
-- **Best practices** - Recommended patterns and approaches
+- **Code examples** - Real examples with detailed explanations
+- **Best practices** - Recommended patterns and anti-patterns
 
 ### 📁 Documentation Structure
 
 ```
 docs/
 ├── src/
-│   ├── lib.rs              # Main documentation hub
+│   ├── SUMMARY.md          # Table of contents
+│   ├── introduction.md     # Getting started guide
 │   ├── basic/              # Features 1-10 (threading, collections, etc.)
 │   ├── intermediate/       # Features 11-15 (networking, iterators, etc.)
-│   └── advanced/           # Features 16-20 (Pin, async, etc.)
-├── Cargo.toml             # Documentation project
-└── build_docs.sh          # Build script
+│   ├── advanced/           # Features 16-20 (Pin, async, etc.)
+│   └── contributing.md     # Contribution guidelines
+├── book.toml              # mdBook configuration
+└── build.sh               # Build script
 ```
 
 ### 🚀 Building Locally
@@ -146,17 +155,17 @@ docs/
 # Navigate to docs directory
 cd docs
 
-# Build and open documentation
-cargo doc --no-deps --open
+# Serve with live reload
+mdbook serve
 
-# Or use the build script
-./build_docs.sh
+# Or build static site
+mdbook build
 ```
 
 ### 🔧 Automatic Deployment
 
 The documentation is automatically deployed to GitHub Pages using GitHub Actions:
-- **Workflow**: `.github/workflows/docs.yml`
+- **Workflow**: `.github/workflows/deploy-docs.yml`
 - **Trigger**: Pushes to main branch
 - **URL**: [https://ioma8.github.io/rust-stdlib-showcase/](https://ioma8.github.io/rust-stdlib-showcase/)
 

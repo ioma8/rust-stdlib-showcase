@@ -1,0 +1,24 @@
+[book]
+title = "Rust Standard Library Showcase"
+authors = ["Rust Education Team"]
+description = "A comprehensive guide to 20 essential Rust standard library features"
+language = "en"
+src = "src"
+
+[build]
+build-dir = "book"
+create-missing = false
+
+[output.html]
+default-theme = "rust"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/ioma8/rust-stdlib-showcase"
+edit-url-template = "https://github.com/ioma8/rust-stdlib-showcase/edit/main/docs/{path}"
+site-url = "/rust-stdlib-showcase/"
+
+[output.html.search]
+enable = true
+
+[output.html.fold]
+enable = true
+level = 0
