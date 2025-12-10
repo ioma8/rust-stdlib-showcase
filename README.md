@@ -51,13 +51,25 @@ The showcase demonstrates **20 key Rust standard library features**:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/rust-stdlib-showcase.git
+git clone https://github.com/ioma8/rust-stdlib-showcase.git
 cd rust-stdlib-showcase
 
 # Build and run
 cargo build
 cargo run
 ```
+
+### Exploring the Documentation
+
+This repository includes **comprehensive Rust documentation** with the same look and feel as the official Rust docs:
+
+```bash
+# Build documentation locally
+cd docs
+cargo doc --no-deps --open
+```
+
+Or visit the **online documentation**: [https://ioma8.github.io/rust-stdlib-showcase/](https://ioma8.github.io/rust-stdlib-showcase/)
 
 ### Expected Output
 The program will execute all 20 features sequentially, showing:
@@ -99,6 +111,54 @@ This is an educational resource, and contributions are welcome!
 - Found a better way to demonstrate a feature? Open a PR!
 - Want to add more features? Let's discuss!
 - Found an issue? Please report it!
+
+## 📚 Documentation Site
+
+This project includes a **complete Rust documentation site** generated using `rustdoc`:
+
+### 🌐 Online Documentation
+
+📖 **[Visit the Documentation Site](https://ioma8.github.io/rust-stdlib-showcase/)**
+
+The online documentation provides:
+- **Authentic Rust docs layout** - Same style as doc.rust-lang.org
+- **20 individual feature pages** - Each feature explained in depth
+- **Search functionality** - Find what you need quickly
+- **Code examples** - Runnable examples for each concept
+- **Best practices** - Recommended patterns and approaches
+
+### 📁 Documentation Structure
+
+```
+docs/
+├── src/
+│   ├── lib.rs              # Main documentation hub
+│   ├── basic/              # Features 1-10 (threading, collections, etc.)
+│   ├── intermediate/       # Features 11-15 (networking, iterators, etc.)
+│   └── advanced/           # Features 16-20 (Pin, async, etc.)
+├── Cargo.toml             # Documentation project
+└── build_docs.sh          # Build script
+```
+
+### 🚀 Building Locally
+
+```bash
+# Navigate to docs directory
+cd docs
+
+# Build and open documentation
+cargo doc --no-deps --open
+
+# Or use the build script
+./build_docs.sh
+```
+
+### 🔧 Automatic Deployment
+
+The documentation is automatically deployed to GitHub Pages using GitHub Actions:
+- **Workflow**: `.github/workflows/docs.yml`
+- **Trigger**: Pushes to main branch
+- **URL**: [https://ioma8.github.io/rust-stdlib-showcase/](https://ioma8.github.io/rust-stdlib-showcase/)
 
 ## 📜 License
 
