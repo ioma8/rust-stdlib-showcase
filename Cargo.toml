@@ -1,0 +1,14 @@
+[package]
+name = "rust-stdlib-showcase"
+version = "0.1.0"
+edition = "2024"
+authors = ["Rust Education Team"]
+description = "A comprehensive showcase of 20 essential Rust standard library features for educational purposes"
+license = "MIT"
+repository = "https://github.com/ioma8/rust-stdlib-showcase"
+homepage = "https://github.com/ioma8/rust-stdlib-showcase"
+readme = "README.md"
+keywords = ["rust", "education", "showcase", "learning", "stdlib"]
+categories = ["education", "demos", "rust-patterns"]
+
+[dependencies]
